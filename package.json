@@ -21,17 +21,32 @@
   },
   "dependencies": {
     "component-emitter": "^1.2.1",
-    "micromatch": "^2.3.8",
-    "mocha": "^2.5.2",
     "vinyl": "^1.1.1",
     "yargs-parser": "^2.4.0"
   },
   "devDependencies": {
+    "gulp-format-md": "^0.1.9",
     "templates": "^0.19.0"
   },
   "keywords": [
     "base",
     "runner",
     "test"
-  ]
+  ],
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+      "verb"
+    ]
+  }
 }
