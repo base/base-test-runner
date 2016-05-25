@@ -1,11 +1,16 @@
 'use strict';
 
-var argv = require('yargs-parser')(process.argv.slice(2));
-var App = require('templates');
+var opts = {alias: {pattern: 'p'}};
+var argv = require('yargs-parser')(process.argv.slice(2), opts);
 var suite = require('base-test-suite');
-var Runner = require('./');
-var runner = new Runner(App, argv);
+var runner = require('base-test-runner')(argv);
 
-// runner.addFile('actual/app.create.js');
+/**
+ * Run the tests in `base-test-suite`
+ */
+
+runner.on('file', function(file) {
+  require(file.path)(require('templates'));
+});
+
 runner.addFiles(suite.test.templates);
-runner.run();
