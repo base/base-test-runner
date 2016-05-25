@@ -15,24 +15,25 @@ function Runner(options) {
 
 Emitter(Runner.prototype);
 
-Runner.prototype.addFile = function(file) {
-  if (!this.match(file)) return;
-  if (/\.js$/.test(file)) {
-    this.emit('file', new File({path: file}));
-    this.files.push(file);
-  }
+Runner.prototype.addFile = function(name, fp) {
+  if (!this.match(fp)) return;
+  var file = new File({path: fp});
+  this.emit('file', file);
+  this.emit(name, file);
+  this.files.push(fp);
   return this;
 };
 
-Runner.prototype.addFiles = function(dir) {
+Runner.prototype.addFiles = function(name, dir) {
   var files = fs.readdirSync(dir);
   for (var i = 0; i < files.length; i++) {
-    this.addFile(path.resolve(dir, files[i]));
+    this.addFile(name, path.resolve(dir, files[i]));
   }
   return this;
 };
 
 Runner.prototype.match = function(file) {
+  if (!/\.js$/.test(file)) return false;
   if (!this.options.pattern) return true;
   var re = toRegex(this.options.pattern);
   return re.test(file);
