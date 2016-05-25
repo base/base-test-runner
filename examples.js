@@ -2,8 +2,8 @@
 
 var opts = {alias: {pattern: 'p'}};
 var argv = require('yargs-parser')(process.argv.slice(2), opts);
-var suite = require('base-test-suite');
 var runner = require('base-test-runner')(argv);
+var suite = require('base-test-suite');
 
 /**
  * Run the tests in `base-test-suite`
