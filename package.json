@@ -1,0 +1,37 @@
+{
+  "name": "base-test-runner",
+  "version": "0.1.0",
+  "description": "Test runner for base projects.",
+  "homepage": "https://github.com/jonschlinkert/base-test-runner",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/base-test-runner",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/base-test-runner/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "component-emitter": "^1.2.1",
+    "micromatch": "^2.3.8",
+    "mocha": "^2.5.2",
+    "vinyl": "^1.1.1",
+    "yargs-parser": "^2.4.0"
+  },
+  "devDependencies": {
+    "templates": "^0.19.0"
+  },
+  "keywords": [
+    "base",
+    "runner",
+    "test"
+  ]
+}
