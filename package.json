@@ -1,7 +1,7 @@
 {
   "name": "base-test-runner",
-  "version": "0.1.1",
   "description": "Test runner for base projects.",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/base-test-runner",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/base-test-runner",
@@ -21,13 +21,13 @@
   },
   "dependencies": {
     "component-emitter": "^1.2.1",
-    "vinyl": "^1.1.1",
-    "yargs-parser": "^2.4.0"
+    "vinyl": "^1.1.1"
   },
   "devDependencies": {
-    "base-test-suite": "^0.1.1",
+    "base-test-suite": "^0.1.4",
     "gulp-format-md": "^0.1.9",
-    "templates": "^0.19.0"
+    "templates": "^0.19.0",
+    "yargs-parser": "^2.4.0"
   },
   "keywords": [
     "base",
