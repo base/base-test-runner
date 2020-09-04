@@ -27,7 +27,7 @@
     "base-test-suite": "^0.1.4",
     "gulp-format-md": "^0.1.9",
     "templates": "^0.19.0",
-    "yargs-parser": "^2.4.0"
+    "yargs-parser": "^19.0.4"
   },
   "keywords": [
     "base",
